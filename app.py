@@ -4,11 +4,6 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load model
-model_path = 'C:\\Deploy\\best_svm_model.pkl'
-with open(model_path, 'rb') as file:
-    model = pickle.load(file)
-
 @app.route('/')
 def home():
     return render_template('home.html')
